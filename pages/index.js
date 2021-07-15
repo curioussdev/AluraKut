@@ -12,21 +12,36 @@ border-radius: 8px;
 `;
 
 const MainGrid = styled.main `
-`
-;
+  display: grid;
+  padding: 16px;
+  grid-gap: 10px;
+
+  @media(min-width: 860px) {
+    grid-template-areas: "profileArea welcomeArea profileRelationsArea";
+    grid-template-columns: 160px 618px 312px;
+  }
+
+  `;
 
 export default function Home() {
   return (
     <MainGrid>
-      <Box>
-      Billadas 
-    </Box>
-    <Box>
-      Bem-vindo
-    </Box>
-    <Box>
-      Angola
-    </Box>
+      <div style={{ gridArea: 'profileArea'}}>
+        <Box >
+          Imagem
+        </Box>
+      </div>
+      <div>
+        <Box style={{ gridArea: 'welcomeArea'}}>
+          Bem-vindo
+        </Box>
+      </div>
+      <div>
+        <Box style={{ gridArea: 'profileRelationsArea'}}>
+          Comunidades
+        </Box>
+      </div>  
+    
     </MainGrid>
 
   );
