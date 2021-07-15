@@ -1,6 +1,6 @@
 import MainGrid from '../src/components/MainGrid';
 import Box from '../src/components/Box';
-import { AlurakutMenu } from '../src/components/lib/AlurakutCommons'
+import { AlurakutMenu } from '../src/lib/AlurakutCommons'
 
 function ProfileSidebar (props){
  
@@ -14,6 +14,13 @@ function ProfileSidebar (props){
 export default function Home() {
 
   const usuario = `programador-curioso`;
+  const pessoasFavoritas = [
+    'juunegreiros',
+     'omariosouto',
+     'peas',
+     'rafaballerirni',
+     'marcobrunodev',
+     'felipefialho']
 
   return (
     <>
