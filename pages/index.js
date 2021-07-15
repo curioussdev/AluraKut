@@ -11,11 +11,23 @@ background: #ffffff;
 border-radius: 8px;
 `;
 
+const MainGrid = styled.main `
+`
+;
+
 export default function Home() {
   return (
-    <Box>
+    <MainGrid>
+      <Box>
       Billadas 
     </Box>
+    <Box>
+      Bem-vindo
+    </Box>
+    <Box>
+      Angola
+    </Box>
+    </MainGrid>
 
   );
 }

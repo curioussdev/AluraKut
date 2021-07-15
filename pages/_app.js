@@ -1,11 +1,23 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #359848;
+  } 
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #d9e6f6;
+  }
+
+  #_next {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
   }
 `
 
