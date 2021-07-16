@@ -18,9 +18,10 @@ export default function Home() {
     'juunegreiros',
      'omariosouto',
      'peas',
-     'rafaballerirni',
+     'programador-curioso',
      'marcobrunodev',
-     'felipefialho']
+     'felipefialho'
+    ]
 
   return (
     <>
@@ -30,7 +31,6 @@ export default function Home() {
       
       <div className="profileArea" style={{ gridArea: 'profileArea' }}>
         <ProfileSidebar githubUser={usuario} />
-      
       </div>
 
       <div className="welcomeArea">
@@ -45,10 +45,25 @@ export default function Home() {
         </Box>
 
         <Box>
-          Pessoas da comunidade
+          <h2 className="smallTitle">
+            Pessoas da comunidade ({pessoasFavoritas.length})
+          </h2>
+
+        <ul>
+          {pessoasFavoritas.map((itemActual) => {
+            return (
+             <a href={`/users/${itemActual}`} key={itemActual }>
+               <img src={`https://github.com/${itemActual}.png`} />
+               <span>{itemActual}</span>
+             </a>
+
+            )
+          })}
+        </ul>
         </Box>
       </div>  
-    
+      
+
     </MainGrid>
     </>
   );
