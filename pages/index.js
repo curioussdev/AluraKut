@@ -1,6 +1,7 @@
 import MainGrid from '../src/components/MainGrid';
 import Box from '../src/components/Box';
-import { AlurakutMenu } from '../src/lib/AlurakutCommons'
+import { AlurakutMenu } from '../src/lib/AlurakutCommons';
+import { ProfileRelationsBoxWrapper } from '../src/components/profileRelations';
 
 function ProfileSidebar (props){
  
@@ -44,7 +45,7 @@ export default function Home() {
           Comunidade
         </Box>
 
-        <Box>
+        <ProfileRelationsBoxWrapper>
           <h2 className="smallTitle">
             Pessoas da comunidade ({pessoasFavoritas.length})
           </h2>
@@ -60,7 +61,7 @@ export default function Home() {
             )
           })}
         </ul>
-        </Box>
+        </ ProfileRelationsBoxWrapper>
       </div>  
       
 
